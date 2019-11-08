@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      calculo IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <ion-item>
+                    <ion-label position="floating" type="number">Altura</ion-label>
+                    <ion-input></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating" type="number">Peso</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <ion-button color="success" expand="block">Calcular</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <ion-item>
+                  <ion-label position="stacked">Resultado</ion-label>
+                  <ion-input readonly="true"></ion-input>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+</ion-content>
