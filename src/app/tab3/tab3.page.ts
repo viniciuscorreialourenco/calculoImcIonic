@@ -6,7 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  
+  private altura: string;
+  private peso: string;
+  private resultado: number;
 
   constructor() {}
+
+  calculaImc(){
+    this.resultado = parseFloat(this.peso) / (parseFloat(this.altura) * parseFloat(this.altura));
+  }
+
+  exibeResultado(){
+    return this.resultado;
+  }
 
 }
