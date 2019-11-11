@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  private altura: string;
+  private resultado: number;
+
   constructor() {}
+
+  calculaPesoIdealMulher(){
+    this.resultado = (parseFloat(this.altura) - 100) * 0.85;
+  }
+
+  exibeResultado(){
+    return this.resultado;
+  }
 
 }

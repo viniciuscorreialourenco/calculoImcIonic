@@ -12,20 +12,20 @@
           <ion-col size="12">
               <ion-item>
                 <ion-label position="floating" type="number">Altura</ion-label>
-                <ion-input></ion-input>
+                <ion-input [(ngModel)]="altura"></ion-input>
               </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
             <ion-col size="12">
-                <ion-button color="success" expand="block">Calcular</ion-button>
+                <ion-button color="success" expand="block" (click)="calculaPesoIdealMulher()">Calcular</ion-button>
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col size="12">
                 <ion-item>
                   <ion-label position="stacked">Resultado</ion-label>
-                  <ion-input readonly="true"></ion-input>
+                  <ion-input readonly="true" [value]="exibeResultado()"></ion-input>
                 </ion-item>
             </ion-col>
           </ion-row>
