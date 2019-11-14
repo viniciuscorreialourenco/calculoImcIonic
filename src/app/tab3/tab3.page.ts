@@ -7,15 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
   
-  private altura: string;
+  private altura: number;
   private peso: string;
   private resultado: number;
+  private resultadoFixo: string;
   private situacao: string;
 
   constructor() {}
 
   calculaImc(){
-    this.resultado = parseFloat(this.peso) / (parseFloat(this.altura) * parseFloat(this.altura));
+    this.resultado = parseFloat(this.peso) / (this.altura * this.altura);
+    this.resultadoFixo = this.resultado.toFixed();
 
     if(this.resultado < 18.5){
       this.situacao = "Abaixo do normal";
@@ -33,7 +35,7 @@ export class Tab3Page {
   }
 
   exibeResultado(){
-    return this.resultado;
+    return this.resultadoFixo;
   }
 
   exibeSituacao(){
